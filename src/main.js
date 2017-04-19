@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 加载 css资源
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import './assets/css/main.css'
 
 Vue.config.productionTip = false
 

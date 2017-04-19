@@ -1,25 +1,38 @@
 <template>
   <div id="app">
-    <h2>Webpack + Vue.js 项目起步</h2>
-    <h3>vue init webpack template 支持热更新(vue-cli)</h3>
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <!-- header component -->
+    <AppHeader></AppHeader>
+
+    <!-- other structure -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar component-->
+        <AppSidebar></AppSidebar>
+
+        <!-- main container SPA page replace -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <router-view></router-view>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+  // 引入 AppHeader 组件
+  import AppHeader from './components/common/AppHeader.vue'
+  // 引入 AppSidebar 组件
+  import AppSidebar from './components/common/AppSidebar.vue'
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      AppHeader,
+      AppSidebar
+    }
   }
 </script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+
 </style>
