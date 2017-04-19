@@ -7,6 +7,7 @@ import Foo from '../components/home/foo.vue'
 
 Vue.use(Router)
 
+// 配置自己的路由
 export default new Router({
   routes: [
     {
@@ -21,5 +22,6 @@ export default new Router({
       path: '/foo',
       component: Foo
     }
-  ]
+  ],
+  linkActiveClass: 'active'
 })
